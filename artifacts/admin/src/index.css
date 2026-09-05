@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/*
+  Design tokens for the OpportunityGenie AI admin dashboard.
+
+  Base palette pulled from the mobile app's own splash background (#0A0F1E)
+  so the admin tool reads as the same product's back office, not a generic
+  SaaS template. Amber is the single accent — a nod to "genie" without
+  leaning on any lamp/magic cliche — used sparingly for primary actions
+  and active states only.
+*/
+:root {
+  --ink-950: #05070f;
+  --ink-900: #0a0f1e;
+  --ink-800: #121933;
+  --ink-700: #1c2444;
+  --ink-600: #2a3357;
+  --ink-400: #626e94;
+  --ink-200: #aab3d4;
+  --paper: #f4f5fb;
+
+  --amber-500: #e8a13c;
+  --amber-400: #f0b65c;
+  --amber-600: #c9852a;
+
+  --danger: #e2645a;
+  --danger-bg: #3a1f22;
+  --success: #4fae7d;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink-950);
+  color: var(--paper);
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code,
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--amber-500);
+  color: var(--ink-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber-400);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
